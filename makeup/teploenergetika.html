@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Теплоэнергетика</title>
+    <link rel="stylesheet" href="css/screen.css"/>
+    <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="scripts/slider.js"></script>
+    <script type="text/javascript" src="scripts/jquery.leanModal.min.js"></script>
+</head>
+<body>
+<!--Голова сайта-->
+    <div class="top-header">
+        <div class="container ">
+            <div class="column3">
+                <div class="choise_lang">
+                    <a href="" class="active">ru</a>
+                    <a href="">en</a>
+                    <a href="">ua</a>
+                    <a href="">de</a>
+                </div>
+            </div>
+
+            <div class="column9 sign_in push_right">
+                <!-- Разметка быстрой формы входа -->            
+                <div class="fast-login-form">
+                    <form id="fast-login">
+                        <a href="#">я не помню пароль</a> / запомнить меня
+                        <input type="checkbox">
+                        <input type="text" class="fast-log-input" placeholder="Имя пользователя">
+                        <input type="password" class="fast-log-input" placeholder="Ваш пароль">
+                        <input type="submit" value="Войти" class="fast-log-butt">
+                        <div class="close-fast-login"></div>
+                    </form>
+                </div>
+                <a href="#auth" rel="auth" name="auth" class="auth">Логин</a>
+                <div class="divider"></div>
+                <a href="#auth" rel="auth" name="auth" class="registration">Регистрация</a>
+            </div>
+        </div>
+    </div>
+    <!-- Конец головы сайта -->
+
+<!-- Модульное окно регистрации и входа -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("a[rel*=auth]").leanModal({ top : 80, overlay : .6, closeButton: ".modal_close" });
+    $("a[rel*=feedback]").leanModal({ top : 80, overlay : .6, closeButton: ".modal_close" });
+});    
+</script>
+
+<div id="feedback">
+    <div id="calculate">
+        <div id="modal-title-back">
+            <h2 class="modal-title">Форма обратной связи</h2>
+            <a class="modal_close" href="#"></a>
+        </div>
+        <div class="feedback-padding">
+            Напишите нам письмо. Наши специалисты ответят на любой вопрос.
+            <br><br>
+            <form class="auth-form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="Электронный адрес">
+                <textarea placeholder="Ваше сообщение"></textarea>
+                <input type="submit" value="Отправить" class="auth-button"> 
+            </form>
+        </div>
+    </div>    
+</div>
+
+<div id="auth">
+    <a class="modal_close" href="#"></a>
+
+    <div id="login">
+        <h2 class="login-title padding-title">Авторизация</h2>
+        <div class="auth-wrapper">
+            <p class="login-top-text">
+                Уже зарегестрирован? Авторизируйся ниже. 
+            </p>
+            <form class="auth-form margin-top">
+                <input type="text" placeholder="Имя пользователя">
+                <input type="password" placeholder="Пароль">
+                <input type="checkbox"> <span>Запомнить меня</span>
+                <input type="submit" value="Войти" class="auth-button"> 
+            </form>
+            <p class="forgot-password">
+                <a href="#" class="auth-link">Я не помню свой пароль</a> <br>
+                <a href="#" class="auth-link">Я не помню имя пользователя</a>
+            </p>
+        </div>
+    </div>
+    <div id="register">
+        <h2 class="register-title padding-title">Регистрация</h2>
+        <div class="auth-wrapper">
+            <p class="login-top-text">
+                Регистрация бесплатна. <br>
+                Присоединиться может каждый
+            </p>
+            <form class="auth-form">
+                <input type="text" placeholder="Имя пользователя">
+                <input type="text" placeholder="Электронный адрес">
+                <input type="password" placeholder="Пароль">
+                <input type="password" placeholder="Подтвердить пароль">
+                <input type="checkbox"> 
+                <div class="padd-left">
+                    <span>Согласиться с<br> 
+                    <a href="#" class="auth-link">правилами <br> использования</a> </span>
+                </div>
+                <input type="submit" value="Регистрация" class="auth-button"> 
+                
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Конец модульного окна регистрации и входа -->
+
+<div class="container">
+    <!-- Логотип + описание к нему -->
+    <div class="row header">
+        <a href="index.html">
+            <img class="site-logo" src="images/logo.jpg" alt=""/>
+        </a>
+
+        <div class="top-icons">
+            <div class="top-forum"></div>
+            <a href="#feedback" rel="feedback" name="feedback">
+                <div class="top-feetback"></div>
+            </a>
+        </div>
+
+        <div class="logo-description">
+            <p>Основой деятельности OOO «TEFF» является</p>
+            <p>применение технологий эффективного использования</p>
+            <p>ресурсов наших заказчиков в повседневной деятельности предприятий.</p>
+        </div>
+    </div>
+   <!-- Навигация -->
+        <div class="row">
+            <ul class="nav">
+                <li><a href="oborudovanie.html"><i class="icons-oborudovanie"></i> Оборудование</a>
+                    <div class="sub-nav">
+                    <ul>
+                        <li><a href="">Транспортирующее</a></li>
+                        <li><a href="">Шнеки</a></li>
+                        <li><a href="">Нории</a></li>
+                        <li><a href="">Фузоловушки</a></li>
+                        <li><a href="">Сита</a></li>
+                        <li><a href="">Охладители</a></li>
+                        <li><a href="">Термосмисители</a></li>
+                        <li><a href="">Маслопресса</a></li>
+                        <li><a href="">Вальцы</a></li>
+                        <li><a href="">Вейки рассева</a></li>
+                        <li><a href="">Запчасти</a></li>
+                    </ul> 
+                    </div>
+                </li>
+                <li><a href="teploenergetika.html"><i class="icons-teploenergetika active"></i> Теплоэнергетика</a>
+                    <div class="sub-nav">
+                        <ul>
+                            <li><a href="">Горелка</a></li>
+                            <li><a href="">Теплогенератор</a></li>
+                        </ul> 
+                    </div>
+                </li>
+                <li><a href="consalting.html"><i class="icons-consalting"></i> Технологический консалтинг</a></li>
+                <li><a href="electrika.html"><i class="icons-electriks"></i> Электрика и автоматизация</a>
+                    <div class="sub-nav">
+                        <ul>
+                            <li><a href="#">Изготовление щитов</a></li>
+                            <li><a href="#">Кип</a></li>
+                            <li><a href="#">Автоматика</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="objects.html"><i class="icons-objects"></i> Наши объекты</a></li>
+                <li><a href="contacts.html"><i class="icons-contact"></i> Контакты</a></li>
+            </ul>
+        </div>
+        <!-- Конец навигации -->
+
+</div>
+
+<!--Контент-->
+<div class="yellow-stripe-title">
+    <h2 class="yellow-title">Теплоэнергетика</h2>
+</div>
+
+<div class="sub-menu-yellow-stripe">
+    <div class="container">
+        <ul class="menu-navs-items">
+            <li><a href="">Горелка</a></li>
+            <li class="any-block"><a href="" class="active">Теплогенератор</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="page-item-block">
+            <h2 class="page-item-title">Тепловой генератор ТГГВТ</h2>
+            <div class="small-description" >
+                <a href="#thumbs-preview" rel="thumbs-preview" name="thumbs-preview">
+                    <img src="images/page-item-image.jpg" alt="" class="page-item-img"/>
+                </a>
+                
+<!-- Увелечение картинки при нажатии -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("a[rel*=thumbs-preview]").leanModal({ top : 80, overlay : .6, closeButton: ".preview_close" });
+});  
+</script>
+<!-- Модальное окно увеличенной картинки -->
+<div id="thumbs-preview">
+    <img src="images/big-thumbs_1.jpg" alt=""/>
+    <div class="preview_close"></div>
+</div>
+
+                <p class="page-item-description">
+                    Так же, компания "TEФФ" производит и реализует тепловой генератор
+                    ТГГВГ. Он комплектуется вихревой автоматизированной горелкой ПВ(а)-3500,
+                    работающей на твердом топливе, с минимальной тепловой мощность от
+                    от 3500 до до 6000 кВт, которая обеспечивает высокоэффективное сжигание
+                    низкосортного мелкофракционного топлива (отходы сельскохозяйственных культур,
+                    гранулированное топливо, отходы деревообработки). Назначение теплогенераторов -
+                    теплообеспечение (газо-воздушная смесь) процессов сушки в различных видах сушилок.
+                </p>
+            </div>
+                <p>Миссия компании ТЭФФ - сохранение природных ресурсов планеты замещением традиционных
+                углеводородов возобновляемыми. Разработанные нами технологии эффективности позволяют производить
+                тепловую энергию, используя лузгу подсолнечника, риса, гречиха, солома, отходы предприятий мощностью
+                до 10 кВт.</p>
+
+                <p>Эффективное использование возобновляемых углеводородов в разы экономит расходы в сравнении
+                с природным газом, коксохимическим и печным топливом, углём, продукции нефтяной продукции отрасли.
+                Технологии перехода на альтернативный вид топлива позволяет получить тоже количество тепла с экономией
+                вложенных средств до 10 раз.</p>
+
+                <p>
+                   В настоящий момент компания "ТЕФФ" производит несколько видов оборудования, работающих на
+                    нетрадиционных видах топлива и является лидером на внутреннем рынке страны.
+                </p>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!--Подвал-->
+<div class="footer-content">
+    <div class="container ">
+        <div class="column3">
+            <span class="copyrights">&copy; 2013, Design by <a href="http://integra.od.ua">Integra-group</a></span>
+        </div>
+        <div class="column3">
+             <span class="footer-email">
+                <img src="images/mail.png" alt=""/>
+                <a href="mailto:teff@meta.ua">teff@meta.ua</a>
+            </span>
+        </div>
+        <div class="column3">
+            <span class="footer-phone">
+                <img src="images/phone.png" alt=""/>
+                <a href="tel:0487786776">[048] 778-67-76</a>
+            </span>
+        </div>
+        <div class="column3 brand-name">
+            teff
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

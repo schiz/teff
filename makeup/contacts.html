@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="css/screen.css"/>
+    <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="scripts/slider.js"></script>
+    <script type="text/javascript" src="scripts/jquery.leanModal.min.js"></script>
+   
+</head>
+<body onload="init()">
+<!--Голова сайта-->
+    <div class="top-header">
+        <div class="container ">
+            <div class="column3">
+                <div class="choise_lang">
+                    <a href="" class="active">ru</a>
+                    <a href="">en</a>
+                    <a href="">ua</a>
+                    <a href="">de</a>
+                </div>
+            </div>
+
+            <div class="column9 sign_in push_right">
+                <!-- Разметка быстрой формы входа -->            
+                <div class="fast-login-form">
+                    <form id="fast-login">
+                        <a href="#">я не помню пароль</a> / запомнить меня
+                        <input type="checkbox">
+                        <input type="text" class="fast-log-input" placeholder="Имя пользователя">
+                        <input type="password" class="fast-log-input" placeholder="Ваш пароль">
+                        <input type="submit" value="Войти" class="fast-log-butt">
+                        <div class="close-fast-login"></div>
+                    </form>
+                </div>
+                <a href="#auth" rel="auth" name="auth" class="auth">Логин</a>
+                <div class="divider"></div>
+                <a href="#auth" rel="auth" name="auth" class="registration">Регистрация</a>
+            </div>
+        </div>
+    </div>
+    <!-- Конец головы сайта -->
+<!-- Модульное окно регистрации и входа -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("a[rel*=auth]").leanModal({ top : 80, overlay : .6, closeButton: ".modal_close" });
+    $("a[rel*=feedback]").leanModal({ top : 80, overlay : .6, closeButton: ".modal_close" });
+});    
+</script>
+
+<div id="feedback">
+    <div id="calculate">
+        <div id="modal-title-back">
+            <h2 class="modal-title">Форма обратной связи</h2>
+            <a class="modal_close" href="#"></a>
+        </div>
+        <div class="feedback-padding">
+            Напишите нам письмо. Наши специалисты ответят на любой вопрос.
+            <br><br>
+            <form class="auth-form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="Электронный адрес">
+                <textarea placeholder="Ваше сообщение"></textarea>
+                <input type="submit" value="Отправить" class="auth-button"> 
+            </form>
+        </div>
+    </div>    
+</div>
+
+<div id="auth">
+    <a class="modal_close" href="#"></a>
+
+    <div id="login">
+        <h2 class="login-title padding-title">Авторизация</h2>
+        <div class="auth-wrapper">
+            <p class="login-top-text">
+                Уже зарегестрирован? Авторизируйся ниже. 
+            </p>
+            <form class="auth-form margin-top">
+                <input type="text" placeholder="Имя пользователя">
+                <input type="password" placeholder="Пароль">
+                <input type="checkbox"> <span>Запомнить меня</span>
+                <input type="submit" value="Войти" class="auth-button"> 
+            </form>
+            <p class="forgot-password">
+                <a href="#" class="auth-link">Я не помню свой пароль</a> <br>
+                <a href="#" class="auth-link">Я не помню имя пользователя</a>
+            </p>
+        </div>
+    </div>
+    <div id="register">
+        <h2 class="register-title padding-title">Регистрация</h2>
+        <div class="auth-wrapper">
+            <p class="login-top-text">
+                Регистрация бесплатна. <br>
+                Присоединиться может каждый
+            </p>
+            <form class="auth-form">
+                <input type="text" placeholder="Имя пользователя">
+                <input type="text" placeholder="Электронный адрес">
+                <input type="password" placeholder="Пароль">
+                <input type="password" placeholder="Подтвердить пароль">
+                <input type="checkbox"> 
+                <div class="padd-left">
+                    <span>Согласиться с<br> 
+                    <a href="#" class="auth-link">правилами <br> использования</a> </span>
+                </div>
+                <input type="submit" value="Регистрация" class="auth-button"> 
+                
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Конец модульного окна регистрации и входа -->
+
+<div class="container">
+    <!-- Логотип + описание к нему -->
+    <div class="row header">
+        <a href="index.html">
+            <img class="site-logo" src="images/logo.jpg" alt=""/>
+        </a>
+
+        <div class="top-icons">
+            <div class="top-forum"></div>
+            <a href="#feedback" rel="feedback" name="feedback">
+                <div class="top-feetback"></div>
+            </a>
+        </div>
+
+        <div class="logo-description">
+            <p>Основой деятельности OOO «TEFF» является</p>
+            <p>применение технологий эффективного использования</p>
+            <p>ресурсов наших заказчиков в повседневной деятельности предприятий.</p>
+        </div>
+    </div>
+    <!-- Навигация -->
+        <div class="row">
+            <ul class="nav">
+                <li><a href="oborudovanie.html"><i class="icons-oborudovanie"></i> Оборудование</a>
+                    <div class="sub-nav">
+                    <ul>
+                        <li><a href="">Транспортирующее</a></li>
+                        <li><a href="">Шнеки</a></li>
+                        <li><a href="">Нории</a></li>
+                        <li><a href="">Фузоловушки</a></li>
+                        <li><a href="">Сита</a></li>
+                        <li><a href="">Охладители</a></li>
+                        <li><a href="">Термосмисители</a></li>
+                        <li><a href="">Маслопресса</a></li>
+                        <li><a href="">Вальцы</a></li>
+                        <li><a href="">Вейки рассева</a></li>
+                        <li><a href="">Запчасти</a></li>
+                    </ul> 
+                    </div>
+                </li>
+                <li><a href="teploenergetika.html"><i class="icons-teploenergetika"></i> Теплоэнергетика</a>
+                    <div class="sub-nav">
+                        <ul>
+                            <li><a href="">Горелка</a></li>
+                            <li><a href="">Теплогенератор</a></li>
+                        </ul> 
+                    </div>
+                </li>
+                <li><a href="consalting.html"><i class="icons-consalting"></i> Технологический консалтинг</a></li>
+                <li><a href="electrika.html"><i class="icons-electriks"></i> Электрика и автоматизация</a>
+                    <div class="sub-nav">
+                        <ul>
+                            <li><a href="#">Изготовление щитов</a></li>
+                            <li><a href="#">Кип</a></li>
+                            <li><a href="#">Автоматика</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="objects.html"><i class="icons-objects"></i> Наши объекты</a></li>
+                <li><a href="contacts.html"><i class="icons-contact active"></i> Контакты</a></li>
+            </ul>
+        </div>
+        <!-- Конец навигации -->
+
+</div>
+
+<!--Контент-->
+<div class="yellow-stripe-title-full">
+    <h2 class="yellow-title">Контакты</h2>
+</div>
+
+<div class="container contacts">
+    <div class="contact-blocks">
+        <i class="icons-contacts-place"></i>
+        <div class="contacts-field">
+            <h4 class="contact-title">Адрес</h4>
+            <p>65013 <br/>
+                Одесская область<br/>
+                г. Одесса<br/>
+                Николаевская дорога<br/>
+                дом 128</p>
+        </div>
+    </div>
+    <div class="contact-blocks">
+        <i class="icons-contacts-phone"></i>
+        <div class="contacts-field">
+            <h4 class="contact-title">Телефон <br>Факс</h4>
+            <br><br>
+            <a href="tel:0487786776">
+                <p>[048] 778-67-76</p>
+            </a>
+        </div>
+    </div>
+    <div class="contact-blocks">
+        <div class="icons-contacts-mail"></div>
+        <div class="contacts-field">
+            <h4 class="contact-title">Электронный<br>адрес</h4>
+            <br><br>
+            <a href="mailto:teff@meta.ua">
+                <p>teff@meta.ua</p>
+            </a>
+        </div>
+    </div>
+    <!-- Карта -->
+<script type="text/javascript">
+
+
+</script>
+
+    <div class="contact-map" id="map">
+        <iframe width="901" height="401" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ua/maps?f=d&amp;source=s_d&amp;saddr=46.534274,30.735792&amp;daddr=&amp;hl=ru&amp;geocode=&amp;sll=46.534274,30.73576&amp;sspn=0.002,0.005284&amp;mra=mift&amp;mrsp=0&amp;sz=18&amp;ie=UTF8&amp;t=m&amp;ll=46.534274,30.735755&amp;spn=0.00296,0.009656&amp;z=17&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.ua/maps?f=d&amp;source=embed&amp;saddr=46.534274,30.735792&amp;daddr=&amp;hl=ru&amp;geocode=&amp;sll=46.534274,30.73576&amp;sspn=0.002,0.005284&amp;mra=mift&amp;mrsp=0&amp;sz=18&amp;ie=UTF8&amp;t=m&amp;ll=46.534274,30.735755&amp;spn=0.00296,0.009656&amp;z=17" style="color:#0000FF;text-align:left"></small></a>
+    </div>
+</div>
+
+
+<!--Подвал сайта-->
+<div class="back-for-bottom"></div>
+<div class="footer-content">
+
+    <div class="container ">
+            <div class="column3">
+                <span class="copyrights">&copy; 2013, Design by <a href="http://integra.od.ua">Integra-group</a></span>
+            </div>
+            <div class="column3">
+                <span class="footer-email">
+                    <img src="images/mail.png" alt=""/>
+                    <a href="mailto:teff@meta.ua">teff@meta.ua</a>
+                </span>
+            </div>
+            <div class="column3 footer-phone">
+                <span class="footer-phone">
+                    <img src="images/phone.png" alt=""/>
+                    <a href="tel:0487786776">[048] 778-67-76</a>
+                </span>
+            </div>
+            <div class="column3 brand-name">
+                <img src="images/teff.png" alt="">
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

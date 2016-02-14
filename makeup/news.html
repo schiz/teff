@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+    <link rel="stylesheet" href="css/screen.css"/>
+    <script type="text/javascript" src="scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="scripts/slider.js"></script>
+    <script type="text/javascript" src="scripts/jquery.leanModal.min.js"></script>
+</head>
+<body>
+<!--Голова сайта-->
+    <div class="top-header">
+        <div class="container ">
+            <div class="column3">
+                <div class="choise_lang">
+                    <a href="" class="active">ru</a>
+                    <a href="">en</a>
+                    <a href="">ua</a>
+                    <a href="">de</a>
+                </div>
+            </div>
+
+            <div class="column9 sign_in push_right">
+                <!-- Разметка быстрой формы входа -->            
+                <div class="fast-login-form">
+                    <form id="fast-login">
+                        <a href="#">я не помню пароль</a> / запомнить меня
+                        <input type="checkbox">
+                        <input type="text" class="fast-log-input" placeholder="Имя пользователя">
+                        <input type="password" class="fast-log-input" placeholder="Ваш пароль">
+                        <input type="submit" value="Войти" class="fast-log-butt">
+                        <div class="close-fast-login"></div>
+                    </form>
+                </div>
+                <a href="#auth" rel="auth" name="auth" class="auth">Логин</a>
+                <div class="divider"></div>
+                <a href="#auth" rel="auth" name="auth" class="registration">Регистрация</a>
+            </div>
+        </div>
+    </div>
+    <!-- Конец головы сайта -->
+
+<!-- Модульное окно регистрации и входа -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("a[rel*=auth]").leanModal({ top : 80, overlay : .6, closeButton: ".modal_close" });
+    $("a[rel*=feedback]").leanModal({ top : 80, overlay : .6, closeButton: ".modal_close" });
+});    
+</script>
+
+<div id="feedback">
+    <div id="calculate">
+        <div id="modal-title-back">
+            <h2 class="modal-title">Форма обратной связи</h2>
+            <a class="modal_close" href="#"></a>
+        </div>
+        <div class="feedback-padding">
+            Напишите нам письмо. Наши специалисты ответят на любой вопрос.
+            <br><br>
+            <form class="auth-form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="Электронный адрес">
+                <textarea placeholder="Ваше сообщение"></textarea>
+                <input type="submit" value="Отправить" class="auth-button"> 
+            </form>
+        </div>
+    </div>    
+</div>
+
+<div id="auth">
+    <a class="modal_close" href="#"></a>
+
+    <div id="login">
+        <h2 class="login-title padding-title">Авторизация</h2>
+        <div class="auth-wrapper">
+            <p class="login-top-text">
+                Уже зарегестрирован? Авторизируйся ниже. 
+            </p>
+            <form class="auth-form margin-top">
+                <input type="text" placeholder="Имя пользователя">
+                <input type="password" placeholder="Пароль">
+                <input type="checkbox"> <span>Запомнить меня</span>
+                <input type="submit" value="Войти" class="auth-button"> 
+            </form>
+            <p class="forgot-password">
+                <a href="#" class="auth-link">Я не помню свой пароль</a> <br>
+                <a href="#" class="auth-link">Я не помню имя пользователя</a>
+            </p>
+        </div>
+    </div>
+    <div id="register">
+        <h2 class="register-title padding-title">Регистрация</h2>
+        <div class="auth-wrapper">
+            <p class="login-top-text">
+                Регистрация бесплатна. <br>
+                Присоединиться может каждый
+            </p>
+            <form class="auth-form">
+                <input type="text" placeholder="Имя пользователя">
+                <input type="text" placeholder="Электронный адрес">
+                <input type="password" placeholder="Пароль">
+                <input type="password" placeholder="Подтвердить пароль">
+                <input type="checkbox"> 
+                <div class="padd-left">
+                    <span>Согласиться с<br> 
+                    <a href="#" class="auth-link">правилами <br> использования</a> </span>
+                </div>
+                <input type="submit" value="Регистрация" class="auth-button"> 
+                
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Конец модульного окна регистрации и входа -->
+
+<div class="container">
+    <!--Logo + description-->
+    <div class="row header">
+        <a href="index.html">
+            <img class="site-logo" src="images/logo.jpg" alt=""/>
+        </a>
+
+        <div class="top-icons">
+            <div class="top-forum"></div>
+            <a href="#feedback" rel="feedback" name="feedback">
+                <div class="top-feetback"></div>
+            </a>
+        </div>
+
+        <div class="logo-description">
+            <p>Основой деятельности OOO «TEFF» является</p>
+            <p>применение технологий эффективного использования</p>
+            <p>ресурсов наших заказчиков в повседневной деятельности предприятий.</p>
+        </div>
+    </div>
+    <!-- Навигация -->
+        <div class="row">
+            <ul class="nav">
+                <li><a href="oborudovanie.html"><i class="icons-oborudovanie"></i> Оборудование</a>
+                    <div class="sub-nav">
+                    <ul>
+                        <li><a href="">Транспортирующее</a></li>
+                        <li><a href="">Шнеки</a></li>
+                        <li><a href="">Нории</a></li>
+                        <li><a href="">Фузоловушки</a></li>
+                        <li><a href="">Сита</a></li>
+                        <li><a href="">Охладители</a></li>
+                        <li><a href="">Термосмисители</a></li>
+                        <li><a href="">Маслопресса</a></li>
+                        <li><a href="">Вальцы</a></li>
+                        <li><a href="">Вейки рассева</a></li>
+                        <li><a href="">Запчасти</a></li>
+                    </ul> 
+                    </div>
+                </li>
+                <li><a href="teploenergetika.html"><i class="icons-teploenergetika"></i> Теплоэнергетика</a>
+                    <div class="sub-nav">
+                        <ul>
+                            <li><a href="">Горелка</a></li>
+                            <li><a href="">Теплогенератор</a></li>
+                        </ul> 
+                    </div>
+                </li>
+                <li><a href="consalting.html"><i class="icons-consalting"></i> Технологический консалтинг</a></li>
+                <li><a href="electrika.html"><i class="icons-electriks"></i> Электрика и автоматизация</a>
+                    <div class="sub-nav">
+                        <ul>
+                            <li><a href="#">Изготовление щитов</a></li>
+                            <li><a href="#">Кип</a></li>
+                            <li><a href="#">Автоматика</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="objects.html"><i class="icons-objects"></i> Наши объекты</a></li>
+                <li><a href="contacts.html"><i class="icons-contact"></i> Контакты</a></li>
+            </ul>
+        </div>
+        <!-- Конец навигации -->
+
+</div>
+
+<!--Контент-->
+<div class="yellow-stripe-title-full">
+    <h2 class="yellow-title">Новости</h2>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="page-item-block">
+            <h2 class="page-item-title">23.01.13 Наименование новости</h2>
+            <div class="small-description">
+                <img src="images/page-item-image.jpg" alt="" class="page-item-img"/>
+                <p class="page-item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eum fugiat ipsam modi molestiae nemo vero. Accusantium consequatur culpa fugit inventore maxime minima possimus rem veniam. Eaque illum magnam magni quaerat vero! A aut autem consequatur delectus dolor eligendi eos eveniet ex excepturi, exercitationem inventore iure iusto magnam minima, minus, molestiae nihil voluptates voluptatibus. Asperiores doloremque eius exercitationem, facere quos sunt suscipit voluptate. Animi autem enim fugit laborum laudantium neque officia suscipit. Asperiores aut deleniti explicabo laboriosam neque officia qui, sunt vel voluptas. Alias aperiam, dolores, eius esse excepturi facere laborum maiores minus quam quasi qui quia reiciendis, repudiandae veniam?
+                </p>
+            </div>
+
+            <table class="table">
+                <tr>
+                    <th>Название</th>
+                    <th>Название</th>
+                    <th>Название</th>
+                    <th>Название</th>
+                    <th>Название</th>
+                    <th>Название</th>
+                    <th>Название</th>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="page-item-block">
+            <h2 class="page-item-title">22.01.13 Наименование новости</h2>
+            <div class="small-description">
+                <img src="images/teploenergetika.jpg" alt="" class="page-item-img"/>
+                <p class="page-item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores est itaque iusto, magni repellat suscipit veritatis? Ad atque blanditiis consectetur cupiditate debitis deleniti dicta dolor dolore doloremque, ea error est ex excepturi facilis harum id, ipsa minus molestiae mollitia necessitatibus neque nesciunt, nobis non numquam odio officia officiis quaerat quidem quos recusandae rem rerum saepe sequi sit velit veritatis voluptatum. Aut, cum debitis ea est fugiat laboriosam natus nulla suscipit!
+                </p>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+
+        <div class="page-item-block">
+            <h2 class="page-item-title">22.01.13 Наименование новости</h2>
+            <div class="small-description">
+                <p class="page-item-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda atque, dicta est laudantium minus pariatur sequi vero. Impedit, mollitia, qui. Accusamus ad excepturi ipsum molestias necessitatibus nihil tempora ullam unde vero. Accusantium asperiores deserunt dolore enim ipsum maxime, molestiae qui sint? Aperiam at dicta ducimus neque nisi, quibusdam reprehenderit tempore ullam! Accusantium aliquid amet, animi atque aut autem blanditiis deleniti doloribus dolorum error eveniet ex expedita explicabo facere harum iste maiores maxime molestiae nemo neque nesciunt nisi nobis odit praesentium quae quibusdam repellat repellendus repudiandae sequi, suscipit unde ut veritatis voluptatem. Alias cupiditate deleniti iusto molestiae qui sapiente sint!
+                </p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--Подвал-->
+<div class="footer-content">
+    <div class="container ">
+        <div class="column3">
+            <span class="copyrights">&copy; 2013, Design by <a href="http://integra.od.ua">Integra-group</a></span>
+        </div>
+        <div class="column3">
+            <span class="footer-email">
+                <img src="images/mail.png" alt=""/>
+                <a href="mailto:teff@meta.ua">teff@meta.ua</a>
+            </span>
+        </div>
+        <div class="column3">
+            <span class="footer-phone">
+                <img src="images/phone.png" alt=""/>
+                <a href="tel:0487786776">[048] 778-67-76</a>
+            </span>
+        </div>
+        <div class="column3 brand-name">
+            teff
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
